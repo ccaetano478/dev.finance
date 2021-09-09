@@ -4,26 +4,19 @@ const modalOverlay = document.querySelector ('.modal-overlay');
 console.log(modalOverlay);
 
 const modal = {
-    open() {
-        console.log ('adicionei a bendita classe');
-        modalOverlay.classList.add('active');
-        console.log(modalOverlay);
-    }, 
-
-    close() {
-        console.log ('adicionei a bendita classe');
-        modalOverlay.classList.remove('.active');
-        console.log(modalOverlay);
+    get openClose() {
+        modalOverlay.classList.toggle('active');
     },
+
 }
 
 document.addEventListener('click', (e)=>{
     const el = e.target;
     if (el.classList.contains('button', 'new')) {
-        modal.open();
+        modal.openClose;
     }
     if (el.classList.contains('button','cancel')){
-        modal.close();
+        modal.openCLose;
     }
 });
 
