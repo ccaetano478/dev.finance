@@ -208,6 +208,8 @@ table tbody tr td:last-child{
 
     opacity: 0;
     visibility: hidden;
+
+    z-index: 999;
 }
 
 .modal-overlay.active{
@@ -220,6 +222,9 @@ table tbody tr td:last-child{
     padding: 2.4rem;
     width: 90%;
     max-width: 500px;
+
+    position: relative;
+    z-index: 1;
 }
 
 #form{
